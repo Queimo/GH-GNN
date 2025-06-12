@@ -26,7 +26,7 @@ class MPNNconv(nn.Module):
 
         self.project_node_feats = nn.Sequential(
             nn.Linear(node_in_feats, node_out_feats),
-            nn.ReLU()
+            nn.Tanh()
         )
         self.num_step_message_passing = num_step_message_passing
         
